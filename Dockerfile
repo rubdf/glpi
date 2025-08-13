@@ -1,5 +1,5 @@
 # Dockerfile — GLPI em UBI9 PHP 8.2 (Apache + PHP-FPM)
-FROM registry.access.redhat.com/ubi9/php-82@sha256:65f8b34ce48219be1178ce74a19d1338c96a27417bddbe3ca5d5a8b99208b0f3 
+FROM registry.access.redhat.com/ubi9/php-82@sha256:65f8b34ce48219be1178ce74a19d1338c96a27417bddbe3ca5d5a8b99208b0f3
  
 # (Opcional) trave a versão do GLPI aqui
 ENV GLPI_VER=10.0.18
@@ -47,4 +47,5 @@ EXPOSE 8080
 # Mantém o run script da imagem como CMD; usamos o nosso ENTRYPOINT para semear
 ENTRYPOINT ["/usr/local/bin/entrypoint-glpi.sh"]
 CMD ["/usr/libexec/s2i/run"]
+
 
